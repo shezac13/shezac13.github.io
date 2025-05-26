@@ -21,6 +21,12 @@ section {
   margin: auto;
 }
 
+.main-header h1 {
+  overflow: hidden;
+  height: 3.5rem;
+  margin-bottom: 0;
+}
+
 /* About me */
 #about {
   max-width: 55%;
@@ -76,7 +82,8 @@ section {
   color: inherit;
   text-align: center;
   font-size: 2.5rem;
-  padding-bottom: 2px;
+  height: 60px;
+
 }
 
 .projects img {
