@@ -52,6 +52,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: justify;
 }
 
 #about h2 {
