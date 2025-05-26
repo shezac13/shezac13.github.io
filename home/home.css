@@ -1,6 +1,5 @@
-
 * {
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
   scrollbar-width: none;
   overflow: auto;
 }
@@ -8,12 +7,12 @@
 
 section {
   padding: 40px 5px;
-  max-width: 50%;
+  max-width: 70%;
   margin: auto;
 }
 
 /*main header of home page*/
-  .main-header{
+.main-header {
   padding: 6rem;
   max-width: 50%;
   text-align: center;
@@ -22,14 +21,47 @@ section {
   margin: auto;
 }
 
+About me
+#about {
+  max-width: 55%;
+}
+
+.about-container img {
+  height: 300px;
+  width: auto;
+  border-radius: 10%;
+  margin: auto;
+  object-fit: cover;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 2rem; 
+}
+
+.about-container p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about h2 {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+}
+
+/* Projects */
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem;
   margin: 0 auto;
   padding: 2rem;
-  justify-items: center;  /* Center items horizontally within grid */
+  justify-items: center;
 }
 
 .projects a {
@@ -37,7 +69,6 @@ section {
   color: inherit;
   text-align: center;
   max-width: 300px;
-  padding: 3px;
 }
 
 #projects h2 {
@@ -50,31 +81,46 @@ section {
 
 .projects img {
   display: block;
-  height: auto;
+  object-fit: cover;
   border-radius: var(--bs-border-radius);
-  width: 100%;
-  transition: transform 0.3s ease;
+  width: 250px;
+  height: 300px;
+  margin: 25px;
 }
 
-.hover-zoom h4 a{
-    transition: transform 0.3s ease;
-    cursor: pointer;
+.hover-zoom {
+  transition: transform 0.5s ease-in-out;
+  box-shadow: 0 5px 10px var(--secondary-shadow-color);
+}
+
+.hover-zoom h4 a {
+  cursor: pointer;
 }
 
 .hover-zoom:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px var(--shadow-color);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px var(--primary-shadow-color);
 }
-
 
 .projects a.btn {
   color: var(--white);
   background: var(--primary-color);
+  font-weight: 500;
+  border: var(--primary-color) 2px solid;
+  padding: 0.3em 0.5em;
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  font-size: 18px;
 }
 
-footer {
+.projects a.btn:hover {
+  color: var(--primary-text-color);
+  background: var(--white);
+}
+
+.hover-zoom h4 {
+  font-size: 1.5rem;
+  padding: 0.3em;
   text-align: center;
-  padding: 30px;
-  background: var(--primary-color);
-  color: var(--white);
 }

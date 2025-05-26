@@ -4,8 +4,10 @@
   --secondary-color: #727272;
   --third-color: #222;
   --white: #fff;
-  --shadow-color: rgba(0, 0, 0, 0.3);
+  --primary-shadow-color: rgba(0, 0, 0, 0.3);
+  --secondary-shadow-color: rgba(0, 0, 0, 0.15);
   --header-text-size: 20px;
+  --primary-text-color: black;
 }
 
 * {
@@ -16,10 +18,13 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Papyrus !important;
   background: var(--white);
-  color: var(--primary-color);
   padding-top: 70px; 
+}
+
+p {
+  font-size: 17px;
 }
 
 nav {
@@ -35,19 +40,28 @@ nav {
   z-index: 1000;
 }
 
+nav a {
+  color: var(--white);
+  margin: 0 15px;
+  text-decoration: none;
+}
+
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  height: 42px;
 }
 
+/* Main menu */
 .nav-middle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
   display: flex;
   gap: 0.1em;
-  margin: auto;
 }
 
 .nav-middle a, .nav-right a {
@@ -65,14 +79,59 @@ nav {
   transition: background 0.2s, color 0.2s;
 }
 
-.nav-right a {
-  /* color: #0077b5; */
-  font-size: 12px;
+/* icons linking to my linkedin and github */
+.nav-right {
   display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-left: auto;
 }
 
-nav a {
+.nav-right a {
+  height: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+
+/* Github logo hue */
+.nav-right-github a{
+  border-radius: 50%;
+}
+
+.nav-right-github a:hover {
+  transition: color 0.2s;
+  background: rgba(255,255,255,0.1); 
+}
+  
+/* LinkedIn logo color change */
+.nav-right-linkedin a i {
+  z-index: 1; /* Make sure icon is above the letter background */
+}
+
+.nav-right-linkedin a:hover {
+  color:#0a66c2;
+}
+
+.nav-right-linkedin a::before {
+  content: ''; /* Ensure the background will be visible */
+  position: absolute;
+  width: 24px;    /* Smaller than icon */
+  height: 24px;
+  z-index: 0;
+}
+
+.nav-right-linkedin a:hover::before {
+  background: white; /* letter background */
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--primary-color);
   color: var(--white);
-  margin: 0 15px;
-  text-decoration: none;
 }
