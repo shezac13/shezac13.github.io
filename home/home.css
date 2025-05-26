@@ -19,6 +19,8 @@ section {
   color: white;
   background: var(--third-color);
   margin: auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .main-header h1 {
@@ -83,7 +85,6 @@ section {
   text-align: center;
   font-size: 2.5rem;
   height: 60px;
-
 }
 
 .projects img {
